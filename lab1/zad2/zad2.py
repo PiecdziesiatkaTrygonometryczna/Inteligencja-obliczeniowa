@@ -73,7 +73,7 @@ plt.ylabel("Wysokość (m)")
 plt.plot(xArray, yArray)
 plt.grid(True)
 plt.show()
-plt.savefig('plot.png')
+plt.savefig('trajektoria.png')
 
 
 
