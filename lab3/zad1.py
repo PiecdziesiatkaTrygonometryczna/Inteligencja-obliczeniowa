@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 
 # podzial na zbior testowy (30%) i treningowy (70%), ziarno losowosci = 13
 (train_set, test_set) = train_test_split(df.values, train_size=0.7, 
-random_state=483483)
+random_state=285745)
 
 # print(test_set)
 # print(test_set.shape[0])
