@@ -60,3 +60,5 @@ print(conf_matrix)
 # z racji na to, że lepiej jest zostać zdiagnozowanym jako chorym, przejść inne badania, i potem jednak okazać się
 # zdrowym, niż zostać zdiagnozowanym jako zdrowy, w rzeczywistości będąc chorym i dać chorobie postępować,
 # nie wiedząć o niej
+
+# w tym przypadku więcej jest błędów fałszywie negatywnych (45) w stosunku do fałszywie pozytywnych (14)
