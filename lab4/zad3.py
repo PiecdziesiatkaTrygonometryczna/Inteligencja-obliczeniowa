@@ -50,6 +50,8 @@ print(conf_matrix)
 # [[135  14]
 #  [ 45  37]]
 
+# poradziła sobie gorzej, w poprzednich laboratoriach w działaniach na zbiorach z  irysami
+# sieci osiągały dokładność powyżej 90%, w jednym przypadku nawet 97%.
 
 
 # F 
