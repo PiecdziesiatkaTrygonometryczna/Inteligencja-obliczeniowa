@@ -16,6 +16,8 @@ random_state=13)
 train_labels = train_set[:, -1]
 test_labels = test_set[:, -1]
 
+print(test_labels)
+
 label_encoder = LabelEncoder()
 train_labels_encoded = label_encoder.fit_transform(train_labels)
 test_labels_encoded = label_encoder.transform(test_labels)
@@ -73,15 +75,15 @@ test_labels_encoded = label_encoder.transform(test_labels)
 
 #G
 
-model_2_layers = MLPClassifier(hidden_layer_sizes=(3, 3), activation='relu', solver='adam', max_iter=5000)
-model_2_layers.fit(train_set[:, :-1], train_labels_encoded)
+# model_2_layers = MLPClassifier(hidden_layer_sizes=(3, 3), activation='relu', solver='adam', max_iter=5000)
+# model_2_layers.fit(train_set[:, :-1], train_labels_encoded)
 
-train_accuracy_2_layers = model_2_layers.score(train_set[:, :-1], train_labels_encoded)
-test_accuracy_2_layers = model_2_layers.score(test_set[:, :-1], test_labels_encoded)
+# train_accuracy_2_layers = model_2_layers.score(train_set[:, :-1], train_labels_encoded)
+# test_accuracy_2_layers = model_2_layers.score(test_set[:, :-1], test_labels_encoded)
 
 
-print("score on train data with 2 layers:", train_accuracy_2_layers)
-print("score on test data with 2 layers:", test_accuracy_2_layers)
+# print("score on train data with 2 layers:", train_accuracy_2_layers)
+# print("score on test data with 2 layers:", test_accuracy_2_layers)
 
 # score on train data with 2 layers: 0.9714285714285714
 # score on test data with 2 layers: 0.9777777777777777

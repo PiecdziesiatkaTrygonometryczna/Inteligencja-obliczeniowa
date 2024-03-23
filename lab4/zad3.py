@@ -46,7 +46,7 @@ print("confusion matrix:")
 print(conf_matrix)
 
 # accuracy: 0.7445887445887446
-# confusion matrix:
+# confusion matrix: 
 # [[135  14]
 #  [ 45  37]]
 
