@@ -14,7 +14,7 @@ def predict_image(model, image_path: str):
 
 # Main function
 def main():
-    model = load_model('model/model2Copy.keras', compile=False)  # Load your model
+    model = load_model('model/model2.keras', compile=False)  # Load your model
     model.compile(optimizer='sgd', loss='categorical_crossentropy', metrics=['accuracy'])
 
     # Test the model on all data from the dataset_dogs_vs_cats/test folder

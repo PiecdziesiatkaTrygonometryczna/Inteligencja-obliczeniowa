@@ -72,3 +72,8 @@ model.save('iris_model.h5')
 
 # Plot and save the model architecture
 plot_model(model, to_file='model_plot.png', show_shapes=True, show_layer_names=True)
+
+# Zad 1
+# a) Skaluje dane. A konkretniej, za pomocą takiego wzoru:     z = (x - u) / s   
+#   Dana x jest skalowana do danej z, gdzie u to średnia zbioru treningowego, a s to odchylenie standardowe
+# b) koduje klasy do tablic złożonych z samych zer i jedynek

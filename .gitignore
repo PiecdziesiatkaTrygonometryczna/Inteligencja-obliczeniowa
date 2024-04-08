@@ -1,4 +1,7 @@
 neunet_recognise_dogs_vs_cats/dataset_dogs_vs_cats
 neunet_recognise_dogs_vs_cats/model/fajny.keras
 neunet_recognise_dogs_vs_cats/my_photos
+neunet_recognise_dogs_vs_cats/tescik
 neunet_recognise_dogs_vs_cats/*.zip
+neunet_recognise_dogs_vs_cats/
+lab5/dogs-cats-mini 1/*

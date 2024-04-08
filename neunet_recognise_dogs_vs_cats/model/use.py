@@ -52,33 +52,33 @@ def predict_image(model, image_path:str):
 # main function
 def main():
 
-    model = load_model('model/model2Copy.keras', compile=False) # insert name of a model
+    model = load_model('model/model2.keras', compile=False) # insert name of a model
 
     model.compile(optimizer='sgd', loss='categorical_crossentropy', metrics=['accuracy'])
 
     image_paths = [ # insert paths to all images to predict animals from
-        "./dataset_dogs_vs_cats/test/cats/cat.359.jpg",
-        "./dataset_dogs_vs_cats/test/cats/cat.288.jpg",
-        "./dataset_dogs_vs_cats/test/dogs/dog.2805.jpg",
-        "./dataset_dogs_vs_cats/test/dogs/dog.683.jpg",
-        "./dataset_dogs_vs_cats/test/dogs/dog.859.jpg",
-        "./dataset_dogs_vs_cats/test/cats/cat.1041.jpg",
-        "./dataset_dogs_vs_cats/test/cats/cat.1168.jpg",
-        "./dataset_dogs_vs_cats/test/dogs/dog.837.jpg",
-        "./dataset_dogs_vs_cats/test/dogs/dog.940.jpg",
-        "./dataset_dogs_vs_cats/test/cats/cat.1408.jpg",
-        "./dataset_dogs_vs_cats/test/cats/cat.1917.jpg",
-        "./dataset_dogs_vs_cats/test/cats/cat.2002.jpg",
-        "./dataset_dogs_vs_cats/test/cats/cat.2206.jpg",
-        "./dataset_dogs_vs_cats/test/dogs/dog.304.jpg",
-        "./dataset_dogs_vs_cats/test/cats/cat.694.jpg",
-        "./dataset_dogs_vs_cats/test/cats/cat.763.jpg",
-        "./dataset_dogs_vs_cats/test/dogs/dog.1162.jpg",
-        "./dataset_dogs_vs_cats/test/dogs/dog.1427.jpg",
-        "./dataset_dogs_vs_cats/test/dogs/dog.2235.jpg"
+        # "./dataset_dogs_vs_cats/test/cats/cat.359.jpg",
+        # "./dataset_dogs_vs_cats/test/cats/cat.288.jpg",
+        # "./dataset_dogs_vs_cats/test/dogs/dog.2805.jpg",
+        # "./dataset_dogs_vs_cats/test/dogs/dog.683.jpg",
+        # "./dataset_dogs_vs_cats/test/dogs/dog.859.jpg",
+        # "./dataset_dogs_vs_cats/test/cats/cat.1041.jpg",
+        # "./dataset_dogs_vs_cats/test/cats/cat.1168.jpg",
+        # "./dataset_dogs_vs_cats/test/dogs/dog.837.jpg",
+        # "./dataset_dogs_vs_cats/test/dogs/dog.940.jpg",
+        # "./dataset_dogs_vs_cats/test/cats/cat.1408.jpg",
+        # "./dataset_dogs_vs_cats/test/cats/cat.1917.jpg",
+        # "./dataset_dogs_vs_cats/test/cats/cat.2002.jpg",
+        # "./dataset_dogs_vs_cats/test/cats/cat.2206.jpg",
+        # "./dataset_dogs_vs_cats/test/dogs/dog.304.jpg",
+        # "./dataset_dogs_vs_cats/test/cats/cat.694.jpg",
+        # "./dataset_dogs_vs_cats/test/cats/cat.763.jpg",
+        # "./dataset_dogs_vs_cats/test/dogs/dog.1162.jpg",
+        # "./dataset_dogs_vs_cats/test/dogs/dog.1427.jpg",
+        # "./dataset_dogs_vs_cats/test/dogs/dog.2235.jpg"
     ]
 
-    dirs = ["my_photos"] # insert directories to predict animals from all .jpg images from that directories
+    dirs = ["tescik"] # insert directories to predict animals from all .jpg images from that directories
     for dir in dirs:
         for file in os.listdir(dir):
             if os.path.isfile(os.path.join(dir, file)) and file.endswith('.jpg'): # you can also add: and file.endswith('.png') to predict from png images
