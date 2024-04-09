@@ -37,7 +37,7 @@ checkpoint = ModelCheckpoint("iris_model.keras", monitor='val_accuracy', verbose
 
 # Train model
 history = History()
-model.fit(train_images, train_labels, epochs=500, batch_size=64, validation_split=0.2, callbacks=[history, checkpoint])
+model.fit(train_images, train_labels, epochs=4000, batch_size=64, validation_split=0.2, callbacks=[history, checkpoint])
 
 # Evaluate on test set
 test_loss, test_acc = model.evaluate(test_images, test_labels)
