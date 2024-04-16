@@ -7,5 +7,7 @@ neunet_recognise_dogs_vs_cats/
 lab5/dogs-cats-mini 1/*
 proj1/chords_dataset
 proj1/genres/archive
+proj1/genres/genres_simple
 proj1/genres/test
+proj1/genres/test_json
 proj1/genres/data_full.json

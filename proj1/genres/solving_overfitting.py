@@ -5,8 +5,8 @@ import tensorflow.keras as keras
 import matplotlib.pyplot as plt
 
 # path to json file that stores MFCCs and genre labels for each processed segment
-DATA_PATH = "data_full.json"
-MODEL_PATH = "model4.h5"
+DATA_PATH = "data_50.json"
+MODEL_PATH = "model7.h5"
 
 def load_data(data_path):
     """Loads training dataset from json file.
@@ -96,7 +96,7 @@ if __name__ == "__main__":
     model.summary()
 
     # train model
-    history = model.fit(X_train, y_train, validation_data=(X_test, y_test), batch_size=32, epochs=400)
+    history = model.fit(X_train, y_train, validation_data=(X_test, y_test), batch_size=32, epochs=2000)
 
     save_model(model, MODEL_PATH)
 

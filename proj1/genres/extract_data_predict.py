@@ -1,12 +1,14 @@
 import json
 import math
 import librosa
+import os
 
-TEST_FILE_PATH = "test/fear-of-the-dark.mp3"
-JSON_PATH = "data_test.json"
+TEST_FOLDER = "test"
+TEST_JSON_FOLDER = "test_json"
 SAMPLE_RATE = 22050
 TRACK_DURATION = 575  # measured in seconds
 SAMPLES_PER_TRACK = SAMPLE_RATE * TRACK_DURATION
+NUM_SEGMENTS = 191
 
 
 def save_mfcc(file_path, json_path, num_mfcc=13, n_fft=2048, hop_length=512, num_segments=5):
@@ -39,5 +41,22 @@ def save_mfcc(file_path, json_path, num_mfcc=13, n_fft=2048, hop_length=512, num
         json.dump(data, fp, indent=4)
 
 
+def convert_to_mfccs():
+    # Create the test_json folder if it doesn't exist
+    os.makedirs(TEST_JSON_FOLDER, exist_ok=True)
+
+    # Iterate over all files in the test folder
+    for filename in os.listdir(TEST_FOLDER):
+        file_path = os.path.join(TEST_FOLDER, filename)
+        
+        # Check if the file is a WAV or MP3 file
+        if file_path.endswith(".wav") or file_path.endswith(".mp3"):
+            # Generate the JSON file path
+            json_filename = os.path.splitext(filename)[0] + ".json"
+            json_path = os.path.join(TEST_JSON_FOLDER, json_filename)
+            
+            # Process the file and save the MFCCs to JSON
+            save_mfcc(file_path, json_path, num_segments=NUM_SEGMENTS)
+
 if __name__ == "__main__":
-    save_mfcc(TEST_FILE_PATH, JSON_PATH, num_segments=191)
+    convert_to_mfccs()
