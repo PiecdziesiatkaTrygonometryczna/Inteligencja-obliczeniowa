@@ -3,7 +3,7 @@ import os
 import math
 import librosa
 
-DATASET_PATH = "genres_simple"
+DATASET_PATH = "genres_simple/"
 JSON_PATH = "data_10.json"
 SAMPLE_RATE = 22050
 TRACK_DURATION = 30 # measured in seconds
@@ -58,7 +58,8 @@ def save_mfcc(dataset_path, json_path, num_mfcc=13, n_fft=2048, hop_length=512, 
                     finish = start + samples_per_segment
 
                     # extract mfcc
-                    mfcc = librosa.feature.mfcc(signal[start:finish], sample_rate, n_mfcc=num_mfcc, n_fft=n_fft, hop_length=hop_length)
+                    mfcc = librosa.feature.mfcc(y=signal[start:finish], sr=sample_rate, n_mfcc=num_mfcc, n_fft=n_fft, hop_length=hop_length)
+
                     mfcc = mfcc.T
 
                     # store only mfcc feature with expected number of vectors
