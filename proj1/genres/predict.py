@@ -61,7 +61,7 @@ if __name__ == "__main__":
     predictions = predict(model, X_test)
 
 
-
+print(predictions)
 mapping = [
     "blues",
     "classical",

@@ -2,7 +2,7 @@ import json
 import math
 import librosa
 
-TEST_FILE_PATH = "test/test2.mp3"
+TEST_FILE_PATH = "test/test.mp3"
 JSON_PATH = "data_test.json"
 SAMPLE_RATE = 22050
 TRACK_DURATION = 575  # measured in seconds
