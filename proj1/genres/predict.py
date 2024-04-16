@@ -4,9 +4,9 @@ import tensorflow.keras as keras
 from collections import Counter
 
 # Path to the saved model
-MODEL_PATH = "model.h5"
+MODEL_PATH = "model4.h5"
 # Path to the test data
-TEST_DATA_PATH = "data_test.json"
+TEST_DATA_PATH = "data_full.json"
 
 def load_model(model_path):
     """Loads the saved model from file.
