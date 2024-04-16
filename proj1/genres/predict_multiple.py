@@ -5,7 +5,7 @@ from collections import Counter
 import os
 
 # Path to the saved model
-MODEL_PATH = "model7.h5"
+MODEL_PATH = "cnn_model4.h5"
 # Path to the folder containing the JSON files
 JSON_FOLDER = "test_json"
 
