@@ -62,6 +62,20 @@ if __name__ == "__main__":
 
 
 
+mapping = [
+    "blues",
+    "classical",
+    "country",
+    "disco",
+    "hiphop",
+    "jazz",
+    "metal",
+    "pop",
+    "reggae",
+    "rock"
+]
+
+
 # Count total number of predictions
 total_predictions = len(predictions)
 
@@ -75,9 +89,8 @@ threshold_percentage = 15
 total = sum(count for digit, count in occurrences.items() if (count / total_predictions) * 100 >= threshold_percentage)
 
 # Calculate percentage for each digit meeting the threshold
-percentages = {digit: (count / total) * 100 for digit, count in occurrences.items() if (count / total_predictions) * 100 >= threshold_percentage}
+percentages = {mapping[digit]: (count / total) * 100 for digit, count in occurrences.items() if (count / total_predictions) * 100 >= threshold_percentage}
 
 # Print percentages for each digit meeting the threshold
-for digit, percentage in percentages.items():
-    print(f"Digit {digit}: {percentage:.2f}%")
-
+for genre, percentage in percentages.items():
+    print(f"{genre}: {percentage:.2f}%")
