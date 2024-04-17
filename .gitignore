@@ -5,6 +5,7 @@ proj0/tescik
 proj0/*.zip
 lab5/dogs-cats-mini 1/*
 proj1/chords_recognition
+proj1/genres_front/songs
 proj1/genres_recognition/data_to_predict
 proj1/genres_recognition/datasets
 proj1/genres_recognition/models

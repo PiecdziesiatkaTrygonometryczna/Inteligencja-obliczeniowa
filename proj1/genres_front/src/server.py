@@ -140,7 +140,7 @@ def index():
         yt = YouTube(video_url)
 
         # Extract only audio
-        video = yt.streams.filter(only_audio=True).first()
+        video = yt.streams.filter(only_audio=True   ).first()
 
         # Download the file
         filename = video.download(output_path=DOWNLOAD_FOLDER)
