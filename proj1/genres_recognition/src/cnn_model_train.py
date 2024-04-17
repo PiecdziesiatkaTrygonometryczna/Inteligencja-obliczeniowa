@@ -4,8 +4,9 @@ from sklearn.model_selection import train_test_split
 import tensorflow.keras as keras
 import matplotlib.pyplot as plt
 
-DATA_PATH = "better_data.json"
-MODEL_PATH = "cnn_model5.h5"
+DATA_PATH = "../datasets/jsons/better_dataset.json"
+MODEL_PATH = "../models/cnn_model7.h5"
+SAVE_FIG_PATH= "../plots/cnn_model_7.png"
 
 
 def load_data(data_path):
@@ -48,7 +49,7 @@ def plot_history(history):
     axs[1].legend(loc="upper right")
     axs[1].set_title("Error eval")
 
-    plt.savefig("cnn_model_3.png")
+    plt.savefig(SAVE_FIG_PATH)
 
 
 def prepare_datasets(test_size, validation_size):
@@ -91,24 +92,24 @@ def build_model(input_shape):
     model = keras.Sequential()
 
     # 1st conv layer
-    model.add(keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=input_shape))
+    model.add(keras.layers.Conv2D(64, (5, 5), activation='relu', input_shape=input_shape))
     model.add(keras.layers.MaxPooling2D((3, 3), strides=(2, 2), padding='same'))
     model.add(keras.layers.BatchNormalization())
 
     # 2nd conv layer
-    model.add(keras.layers.Conv2D(32, (3, 3), activation='relu'))
-    model.add(keras.layers.MaxPooling2D((3, 3), strides=(2, 2), padding='same'))
+    model.add(keras.layers.Conv2D(64, (3, 3), activation='relu'))
+    model.add(keras.layers.MaxPooling2D((2, 2), strides=(1, 1), padding='same'))
     model.add(keras.layers.BatchNormalization())
 
     # 3rd conv layer
-    model.add(keras.layers.Conv2D(32, (2, 2), activation='relu'))
+    model.add(keras.layers.Conv2D(64, (2, 2), activation='relu'))
     model.add(keras.layers.MaxPooling2D((2, 2), strides=(2, 2), padding='same'))
     model.add(keras.layers.BatchNormalization())
 
     # flatten output and feed it into dense layer
     model.add(keras.layers.Flatten())
-    model.add(keras.layers.Dense(64, activation='relu'))
-    model.add(keras.layers.Dropout(0.3))
+    model.add(keras.layers.Dense(128, activation='relu'))
+    model.add(keras.layers.Dropout(0.5))
 
     # output layer
     model.add(keras.layers.Dense(10, activation='softmax'))
@@ -157,7 +158,7 @@ if __name__ == "__main__":
     model = build_model(input_shape)
 
     # compile model
-    optimiser = keras.optimizers.Adam(learning_rate=0.0001)
+    optimiser = keras.optimizers.Adam(learning_rate=0.00001)
     model.compile(optimizer=optimiser,
                   loss='sparse_categorical_crossentropy',
                   metrics=['accuracy'])
