@@ -139,8 +139,11 @@ def index():
         # Create a YouTube object
         yt = YouTube(video_url)
 
+        # Extract the title of the YouTube video
+        video_title = yt.title
+
         # Extract only audio
-        video = yt.streams.filter(only_audio=True   ).first()
+        video = yt.streams.filter(only_audio=True).first()
 
         # Download the file
         filename = video.download(output_path=DOWNLOAD_FOLDER)
@@ -163,7 +166,25 @@ def index():
         json_path = os.path.join(JSON_FOLDER, json_filename)
         genres = predict_genre(json_path)
 
-        return jsonify(genres)
+        # Construct HTML response with predicted genres, song title, and file name
+        genres_html = "<h2>Gatunki przewidywane przez model:</h2>"
+        for genre, percentage in genres.items():
+            genres_html += f"<p>{genre}: {percentage:.2f}%</p>"
+
+        # Include the song title and file name in the HTML response
+        html_response = f"""
+        <h1>Witaj w programie do zgadywania gatunku piosenki</h1>
+        <form method="post">
+        Podaj link do piosenki na YouTube: <input type="text" name="video_url"><br>
+        <input type="submit" value="Zgadnij!">
+        </form>
+        <h2>Nazwa piosenki: {video_title}</h2>
+        {genres_html}
+        """
+
+
+        # Return the HTML response
+        return html_response
 
     return """
     <h1>Witaj w programie do zgadywania gatunku piosenki</h1>
