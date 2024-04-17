@@ -1,4 +1,0 @@
-Model2Copy Accuracy on Test Data: 92.92%
-Model2Copy after one retraining with 2 epochs and second retraining with 6 epochs: Accuracy on Test Data: 92.92%
-Model2 Accuracy on Test Data: 92.92%
-Model3: 90.56%

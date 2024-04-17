@@ -1,13 +1,12 @@
-neunet_recognise_dogs_vs_cats/dataset_dogs_vs_cats
-neunet_recognise_dogs_vs_cats/model/fajny.keras
-neunet_recognise_dogs_vs_cats/my_photos
-neunet_recognise_dogs_vs_cats/tescik
-neunet_recognise_dogs_vs_cats/*.zip
-neunet_recognise_dogs_vs_cats/
+proj0/dataset_dogs_vs_cats
+proj0/model/fajny.keras
+proj0/my_photos
+proj0/tescik
+proj0/*.zip
 lab5/dogs-cats-mini 1/*
-proj1/chords_dataset
-proj1/genres/archive
-proj1/genres/genres_simple
-proj1/genres/test
+proj1/chords_recognition
+proj1/genres_recognition/data_to_predict
+proj1/genres_recognition/datasets
+proj1/genres_recognition/models
 proj1/genres/test_json
 proj1/genres/data_full.json
