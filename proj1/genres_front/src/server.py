@@ -21,6 +21,15 @@ NUM_MFCC = 13
 N_FFT = 2048
 HOP_LENGTH = 512
 
+# Function to create necessary folders if they don't exist
+def create_folders():
+    os.makedirs(DOWNLOAD_FOLDER, exist_ok=True)
+    os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+    os.makedirs(JSON_FOLDER, exist_ok=True)
+
+# Call create_folders() before using the folders
+create_folders()
+
 # Load the genre prediction model
 model = keras.models.load_model(MODEL_PATH)
 def save_mfcc(file_path, json_path, num_mfcc=NUM_MFCC, n_fft=N_FFT, hop_length=HOP_LENGTH, num_segments=NUM_SEGMENTS):
