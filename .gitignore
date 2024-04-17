@@ -8,5 +8,3 @@ proj1/chords_recognition
 proj1/genres_recognition/data_to_predict
 proj1/genres_recognition/datasets
 proj1/genres_recognition/models
-proj1/genres/test_json
-proj1/genres/data_full.json

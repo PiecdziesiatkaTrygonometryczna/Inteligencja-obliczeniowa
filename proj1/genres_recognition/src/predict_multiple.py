@@ -7,7 +7,7 @@ import os
 # Path to the saved model
 MODEL_PATH = "../models/cnn_model7.h5"
 # Path to the folder containing the JSON files
-JSON_FOLDER = "../data_to_predict/predict_json"
+JSON_FOLDER = "../data_to_predict/linkin_park_json"
 
 def load_model(model_path):
     """Loads the saved model from file."""
