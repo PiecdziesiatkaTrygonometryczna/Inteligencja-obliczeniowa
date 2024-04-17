@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="icon.png" type="image/png">
     <link
       href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet">
@@ -200,12 +198,76 @@
       text-shadow: 0 0 1vh rgb(255, 0, 255);
     }
   }
+
+  .container {
+    margin: 0 auto;
+    width: 80%;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+}
+
+.welcome-text {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #0056b3;
+}
+
+.video-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.genre-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.genre-item {
+    font-size: 20px; /* Adjusted font size for genre items */
+    margin-bottom: 5px;
+}
+
+
+
     </style>
 </head>
 <body>
     <header class="main-header">
         <div class="left-side">
-          <a href="https://dawid-kalinowski.github.io/index.html"><img src="logo.png" class="logo"></a>
           <h1 class="header-title">Koło Naukowe <span class="header-name">NaN++</span></h1>
         </div>
         <nav class="right-side">
@@ -218,20 +280,24 @@
         </nav>
       </header>
     <div class="container">
-        <h1>Witaj w programie do zgadywania gatunku piosenki</h1>
+        <div class="welcome-text">Witaj w programie do zgadywania gatunku piosenki</div>
+        <div class="form-container">
         <form method="post">
-            <label for="video_url">Podaj link do piosenki na YouTube:</label>
-            <input type="text" id="video_url" name="video_url">
-            <button type="submit">Zgadnij!</button>
+            <div class="form-label">Podaj link do piosenki na YouTube:</div>
+            <input type="text" id="video_url" name="video_url" class="form-input">
+            <button type="submit" class="form-button">Zgadnij!</button>
+        </div>
         </form>
-        {% if video_title %}
-        <h2>Nazwa piosenki: {{ video_title }}</h2>
-        {% endif %}
+        <div class="video-title">
+            {% if video_title %}
+            Nazwa piosenki: {{ video_title }}
+            {% endif %}
+        </div>
         <div class="genre-list">
             {% if genres %}
-            <h2>Gatunki przewidywane przez model:</h2>
+            <div class="genre-title">Gatunki przewidywane przez model:</div>
             {% for genre, percentage in genres.items() %}
-            <p class="genre-item">{{ genre }}: {{ percentage }}%</p>
+            <div class="genre-item">{{ genre }}: {{ percentage }}%</div>
             {% endfor %}
             {% endif %}
         </div>
