@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genre Prediction</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 400px;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        label {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .genre-list {
+            margin-top: 20px;
+        }
+        .genre-item {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Witaj w programie do zgadywania gatunku piosenki</h1>
+        <form method="post">
+            <label for="video_url">Podaj link do piosenki na YouTube:</label>
+            <input type="text" id="video_url" name="video_url">
+            <button type="submit">Zgadnij!</button>
+        </form>
+        {% if video_title %}
+        <h2>Nazwa piosenki: {{ video_title }}</h2>
+        {% endif %}
+        <div class="genre-list">
+            {% if genres %}
+            <h2>Gatunki przewidywane przez model:</h2>
+            {% for genre, percentage in genres.items() %}
+            <p class="genre-item">{{ genre }}: {{ percentage }}%</p>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

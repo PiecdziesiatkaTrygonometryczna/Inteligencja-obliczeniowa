@@ -1,4 +1,4 @@
-from flask import Flask, request, send_file, jsonify
+from flask import Flask, request, render_template
 from pytube import YouTube
 import os
 import json
@@ -172,27 +172,9 @@ def index():
             genres_html += f"<p>{genre}: {percentage:.2f}%</p>"
 
         # Include the song title and file name in the HTML response
-        html_response = f"""
-        <h1>Witaj w programie do zgadywania gatunku piosenki</h1>
-        <form method="post">
-        Podaj link do piosenki na YouTube: <input type="text" name="video_url"><br>
-        <input type="submit" value="Zgadnij!">
-        </form>
-        <h2>Nazwa piosenki: {video_title}</h2>
-        {genres_html}
-        """
+        return render_template("index.html", video_title=video_title, genres=genres)
 
-
-        # Return the HTML response
-        return html_response
-
-    return """
-    <h1>Witaj w programie do zgadywania gatunku piosenki</h1>
-    <form method="post">
-    Podaj link do piosenki na YouTube: <input type="text" name="video_url"><br>
-    <input type="submit" value="Zgadnij!">
-    </form>
-    """
+    return render_template("index.html")
 
 def process_audio(audio_file):
     # Generate the JSON file path
