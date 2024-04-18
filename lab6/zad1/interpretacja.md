@@ -1,4 +1,4 @@
-Wszystkie dzieci z 2 klasy przeżyły - ale support ok 1%, czyli było ich tylko 13
+Wszystkie dzieci z 2 klasy przeżyły - ale support ok 1%, czyli było ich tylko 13  
 Bezpośrednio z tej zalezności wynika druga, czyli że jeżeli osoba nie przeżyła i była z drugiej klasy, to była to osoba dorosła 
 
 Prawie wszystkie kobiety (97%) z klasy 1 przeżyły
