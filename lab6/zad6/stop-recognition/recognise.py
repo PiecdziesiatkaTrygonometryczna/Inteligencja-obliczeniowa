@@ -40,3 +40,8 @@ if amount_found != 0:
 plt.subplot(1, 1, 1)
 plt.imshow(img_rgb)
 plt.show()
+
+
+#  Haar Cascade opiera się na tym, że w bardzo krótkim czasie skanujemy całą powierzchnię obrazu kwadratami o różnych wymiarach
+# każdy taki kwadrat jest również skanowany w celu szukania krawędzi z różnymi długościami, pod różnymi kątami, w ten sposób
+# jesteśmy w stanie wykryć dany obiekt, na przykład znak STOP, lub twarz.  
