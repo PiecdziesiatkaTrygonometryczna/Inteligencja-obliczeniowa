@@ -41,7 +41,21 @@ cnn_model6 - 300 epok po 100 piosenek - 83% dokładność
 #### Dla 10 gatunków:
 **cnn_model8 - 100 epok po 100 piosenek - 67,5% dokładność**
 
-![confusion matrix](genres_recognition/plots/confusion_matrix_8.png)
+![confusion matrix](genres_recognition/plots/confusion_matrix_8.png)  
+Gatunki:
+
+
+0. "electronic"
+1. "indie-rock"
+2. "rock"
+3. "jpop"
+4. "rap"
+5. "pop"
+6. "kpop"
+7. "pop-rock"
+8. "classical"
+9. "metal"
+
 
 
 ## Dokumentacja
