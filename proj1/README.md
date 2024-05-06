@@ -58,6 +58,7 @@ do danego gatunku.
 * Czasami pojawia się problem z konwersją danych, wtedy najlepiej podać
 inny link do tego samego utworu.
 ![Screenshot](ss1.png)
+![Screenshot](ss2.png)
 
 
 ### Metoda pozwalajaca na szybsze użycie modelu na większej ilości utworów jednocześnie
