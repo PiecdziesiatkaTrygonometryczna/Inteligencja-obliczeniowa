@@ -41,6 +41,7 @@ cnn_model6 - 300 epok po 100 piosenek - 83% dokładność
 #### Dla 10 gatunków:
 **cnn_model8 - 100 epok po 100 piosenek - 67,5% dokładność**
 
+![learning curve](genres_recognition/plots/cnn_model_8.png)  
 ![confusion matrix](genres_recognition/plots/confusion_matrix_8.png)  
 Gatunki:
 
