@@ -3,9 +3,12 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 import tensorflow.keras as keras
 import matplotlib.pyplot as plt
+from sklearn.metrics import confusion_matrix, accuracy_score
+import seaborn as sns
+
 
 DATA_PATH = "../../better_data.json"
-MODEL_PATH = "../models/cnn_model7.h5"
+MODEL_PATH = "../models/cnn_model8.h5"
 SAVE_FIG_PATH= "../plots/cnn_model_8.png"
 
 
@@ -166,7 +169,7 @@ if __name__ == "__main__":
     model.summary()
 
     # train model
-    history = model.fit(X_train, y_train, validation_data=(X_validation, y_validation), batch_size=32, epochs=2)
+    history = model.fit(X_train, y_train, validation_data=(X_validation, y_validation), batch_size=32, epochs=100)
 
     save_model(model, MODEL_PATH)
 
@@ -174,12 +177,23 @@ if __name__ == "__main__":
     plot_history(history)
 
     # evaluate model on test set
+ 
+
+    # Make predictions on the test set
+    y_pred = model.predict(X_test)
+    y_pred = np.argmax(y_pred, axis=1)  # Convert probabilities to class labels
+
+    # Calculate and print the confusion matrix
+    conf_matrix = confusion_matrix(y_test, y_pred)
+    print('\nConfusion Matrix:\n', conf_matrix)
+
+
+    plt.figure(figsize=(8,6))
+    sns.heatmap(conf_matrix, annot=True, cmap='Blues', fmt='d')
+    plt.title('Confusion Matrix')
+    plt.ylabel('True Label')
+    plt.xlabel('Predicted Label')
+    plt.savefig('../plots/confusion_matrix_8.png')
+
     test_loss, test_acc = model.evaluate(X_test, y_test, verbose=2)
     print('\nTest accuracy:', test_acc)
-
-    # pick a sample to predict from the test set
-    X_to_predict = X_test[100]
-    y_to_predict = y_test[100]
-
-    # predict sample
-    predict(model, X_to_predict, y_to_predict)

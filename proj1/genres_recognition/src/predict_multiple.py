@@ -5,9 +5,9 @@ from collections import Counter
 import os
 
 # Path to the saved model
-MODEL_PATH = "../models/cnn_model7.h5"
+MODEL_PATH = "../models/cnn_model8.h5"
 # Path to the folder containing the JSON files
-JSON_FOLDER = "../data_to_predict/linkin_park_json"
+JSON_FOLDER = "../data_to_predict/my_songs_json"
 
 def load_model(model_path):
     """Loads the saved model from file."""
@@ -50,10 +50,16 @@ if __name__ == "__main__":
             print(predictions)
             # Mapping of class indices to genre names
             mapping = [
-                "kpop",
-                "metal",
+                "electronic",
+                "indie-rock",
+                "rock",
+                "jpop",
+                "rap",
                 "pop",
-                "rap"
+                "kpop",
+                "pop-rock",
+                "classical",
+                "metal"
             ]
 
             # Count total number of predictions
