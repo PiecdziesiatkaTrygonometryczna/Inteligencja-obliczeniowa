@@ -12,7 +12,7 @@ app = Flask(__name__)
 DOWNLOAD_FOLDER = "../songs/downloads"
 UPLOAD_FOLDER = "../songs/uploads"
 JSON_FOLDER = "../songs/json"
-MODEL_PATH = "../model/cnn_model7.h5"
+MODEL_PATH = "../model/cnn_model8.h5"
 SAMPLE_RATE = 22050
 TRACK_DURATION = 575
 SAMPLES_PER_TRACK = SAMPLE_RATE * TRACK_DURATION
@@ -107,7 +107,18 @@ def predict_genre(json_path):
     predictions = predict(model, X_test)
 
     # Mapping of class indices to genre names
-    mapping = ["kpop", "metal", "pop", "rap"]
+    mapping = [
+        "electronic",
+        "indie-rock",
+        "rock",
+        "jpop",
+        "rap",
+        "pop",
+        "kpop",
+        "pop-rock",
+        "classical",
+        "metal"
+    ]
 
     # Count total number of predictions
     total_predictions = len(predictions)

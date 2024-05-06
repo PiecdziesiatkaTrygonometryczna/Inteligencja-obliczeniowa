@@ -9,6 +9,9 @@ proj1/genres_front/songs
 proj1/genres_recognition/data_to_predict
 proj1/genres_recognition/datasets
 proj1/genres_recognition/models
+proj1/genres_dataset/
+proj1/better_data.json
+proj1/genres_front/model
 lab6/zad6/stop-recognition/images
 lab6/zad6/object-recognition/models
 lab6/zad6/object-recognition/input

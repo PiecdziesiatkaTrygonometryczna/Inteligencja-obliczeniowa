@@ -4,9 +4,9 @@ from sklearn.model_selection import train_test_split
 import tensorflow.keras as keras
 import matplotlib.pyplot as plt
 
-DATA_PATH = "../datasets/jsons/better_dataset.json"
+DATA_PATH = "../../better_data.json"
 MODEL_PATH = "../models/cnn_model7.h5"
-SAVE_FIG_PATH= "../plots/cnn_model_7.png"
+SAVE_FIG_PATH= "../plots/cnn_model_8.png"
 
 
 def load_data(data_path):
@@ -166,7 +166,7 @@ if __name__ == "__main__":
     model.summary()
 
     # train model
-    history = model.fit(X_train, y_train, validation_data=(X_validation, y_validation), batch_size=32, epochs=100)
+    history = model.fit(X_train, y_train, validation_data=(X_validation, y_validation), batch_size=32, epochs=2)
 
     save_model(model, MODEL_PATH)
 

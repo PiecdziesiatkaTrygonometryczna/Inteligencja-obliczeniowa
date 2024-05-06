@@ -3,8 +3,8 @@ import os
 import math
 import librosa
 
-DATASET_PATH = "genres_dataset/"
-JSON_PATH = "better_data.json"
+DATASET_PATH = "../genres_dataset/"
+JSON_PATH = "../better_data.json"
 SAMPLE_RATE = 22050
 TRACK_DURATION = 30 # measured in seconds
 SAMPLES_PER_TRACK = SAMPLE_RATE * TRACK_DURATION

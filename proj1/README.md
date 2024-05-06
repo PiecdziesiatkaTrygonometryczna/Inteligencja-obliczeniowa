@@ -1,10 +1,18 @@
 Genres dataset:
 
-All songs from the following playlists (access 17.04.2024)  
+All songs from the following playlists (access may 2024)  
 https://open.spotify.com/playlist/37i9dQZF1DX1lU51fgoMhF  
 https://open.spotify.com/playlist/37i9dQZF1DWWOaP4H0w5b0  
 https://open.spotify.com/playlist/37i9dQZF1DX76t638V6CA8  
-https://open.spotify.com/playlist/37i9dQZF1DWUa8ZRTfalHk  
+https://open.spotify.com/playlist/37i9dQZF1DWUa8ZRTfalHk
+https://open.spotify.com/playlist/37i9dQZF1DWXRqgorJj26U?si=3617dde5f1c54955  
+https://open.spotify.com/playlist/37i9dQZF1DXatFAWyNT5ad?si=4f3d9fdb4eec4556  
+https://open.spotify.com/playlist/37i9dQZF1DXdbRLJPSmnyq?si=a7317c6426f84977  
+https://open.spotify.com/playlist/37i9dQZF1DXb9izPIc0SCS?si=59cf01b1d88b4a7a  
+https://open.spotify.com/playlist/37i9dQZF1DX4eRPd9frC1m?si=4b7e8c0bdcd44569  
+https://open.spotify.com/playlist/37i9dQZF1DWV0gynK7G6pD?si=bb580d12851d4010  
+
+
 Each playlist contains 100 songs. The songs were divided into 30-seconds  segments, which results in 700-900 items per genre
 
 
