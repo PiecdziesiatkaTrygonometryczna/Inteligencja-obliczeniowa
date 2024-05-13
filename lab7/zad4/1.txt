@@ -1,0 +1,45 @@
+lstm03.py
+
+3 epoki:
+
+Seed:
+" had never done such a thing before, but
+she remembered having seen in her brother’s latin grammar, “ "
+he toet toe toee the toee the toee th the toee th the toee th the toee th the toet aod the toet aod the toet ao ae see tooe th the toet aod the toet ao ae see tooe th the toet aod the toet ao ae see tooe th the toet aod the toet ao ae see tooe th the toet aod the toet ao ae see tooe th the toet aod the toet ao ae see tooe th the toet aod the toet ao ae see tooe th the toet aod the toet ao ae see tooe th the toet aod the toet ao ae see tooe th the toet aod the toet ao ae see tooe th the toet aod
+Done.
+
+
+
+
+
+
+
+lstm05.py
+
+
+3 epoki:
+
+Total Tokens:  38030
+Unique Tokens (Token Vocab):  3236
+Total Patterns:  37930
+2024-05-13 20:19:23.725473: E external/local_xla/xla/stream_executor/cuda/cuda_driver.cc:282] failed call to cuInit: UNKNOWN ERROR (100)
+/home/d/.local/lib/python3.10/site-packages/keras/src/layers/rnn/rnn.py:204: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(**kwargs)
+Seed:
+" seven looked up and said , “ that ’ s right , five ! always lay the blame on others !” “ _you ’ d_ better not talk !” said five . “ i heard the queen say only yesterday you deserved to be beheaded !” “ what for ?” said the 
+one who had spoken first . “ that ’ s none of _your_ business , two !” said seven . “ yes , it _is_ his business !” said five , “ and i ’ ll tell him — it was for bringing the cook tulip - roots "
+Generated text:
+, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , 
+Done.
+
+
+Po dotrenowaniu o kolejne 10 epok:
+
+Seed:
+" to copying and distributing project gutenberg - tm electronic works to protect the project gutenberg - tm concept and trademark . project gutenberg is a registered trademark , and may not be used if you charge for an ebook 
+, except by following the terms of the trademark license , including paying royalties for use of the project gutenberg trademark . if you do not charge anything for copies of this ebook , complying with the trademark license 
+is very easy . you may use this ebook for nearly any purpose such as creation of derivative works , reports , "
+Generated text:
+and and and the , and or , the , , “ , ’ s ’ s the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the , and she the , “ the ’ s ’ t ,” “ the , said the , said the , “ the , said the , “ the , said the , said the , “ the ’ s , “ the , said the ,
+Done.
+d@DESKTOP-4G24NN4:/mnt/d/Inteligencja-obliczeniowa/lab7/zad4/rnn-lstm-complete (1)$ 
