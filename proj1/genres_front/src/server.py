@@ -8,6 +8,7 @@ import numpy as np
 import tensorflow.keras as keras
 from collections import Counter
 
+
 app = Flask(__name__)
 DOWNLOAD_FOLDER = "../songs/downloads"
 UPLOAD_FOLDER = "../songs/uploads"
