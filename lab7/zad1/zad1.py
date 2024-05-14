@@ -32,8 +32,8 @@ stop_words.extend(arr)
 
 filtered_tokens = [word for word in tokens if word.lower() not in stop_words]
 
-# print(filtered_tokens)
-# print("bez stop-words:", len(filtered_tokens))
+print(filtered_tokens)
+print("bez stop-words:", len(filtered_tokens))
 
 # E
 lemmatizer = WordNetLemmatizer()

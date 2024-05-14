@@ -1,18 +1,29 @@
-import praw
+from twikit import Client
+import json
+import pandas as pd
 
-# Set up your Reddit API credentials
-reddit = praw.Reddit(
-    client_id='YOUR_CLIENT_ID',
-    client_secret='YOUR_CLIENT_SECRET',
-    user_agent='YOUR_USER_AGENT',
-)
+client = Client('en-US')
 
-subreddit = reddit.subreddit("learnpython")
+with open("login.json", 'r') as file:
+  user_info = json.load(file)
 
-# Fetch posts
-posts = subreddit.search(query="#learnpython", limit=100)
+client.login(auth_info_1=user_info["username"], password=user_info["password"])
+client.save_cookies('cookies.json')
+client.load_cookies(path='cookies.json')
 
-# Save posts to file
-with open("reddit_posts.txt", "w") as file:
-    for post in posts:
-        file.write(post.title + "\n")  # Or write more details as needed
+user = client.get_user_by_screen_name("TygodnikNIE")
+tweets = user.get_tweets('Tweets', count=100)
+
+tweets_to_store = []
+for tweet in tweets:
+    tweets_to_store.append({
+        'created_at': tweet.created_at,
+        'favorite_count': tweet.favorite_count,
+        'full_text': tweet.full_text,
+    })
+
+df = pd.DataFrame(tweets_to_store)
+df.to_csv('tweets.csv', index=False)
+print(df.sort_values(by='favorite_count', ascending=False))
+
+print(json.dumps(tweets_to_store, indent=4))
