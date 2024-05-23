@@ -1,1 +1,3 @@
-Neural network to distinguish cats from dogs
+## Neural network distinguishing cats from dogs
+## Results:
+![](plot.png)
