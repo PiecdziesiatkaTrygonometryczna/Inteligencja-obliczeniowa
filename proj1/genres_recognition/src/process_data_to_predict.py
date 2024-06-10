@@ -3,8 +3,8 @@ import math
 import librosa
 import os
 
-TEST_FOLDER = "../data_to_predict/my_songs"
-TEST_JSON_FOLDER = "../data_to_predict/my_songs_json"
+TEST_FOLDER = "../data_to_predict/test"
+TEST_JSON_FOLDER = "../data_to_predict/test_json"
 SAMPLE_RATE = 22050
 TRACK_DURATION = 575  # measured in seconds
 SAMPLES_PER_TRACK = SAMPLE_RATE * TRACK_DURATION

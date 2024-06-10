@@ -18,3 +18,6 @@ lab6/zad6/object-recognition/output
 proj1/
 lab7/zad4/rnn-lstm-complete/*.keras
 lab7/zad3/login.json
+proj2/genres_recognition/data_to_predict
+proj2/genres_recognition/genres_dataset
+proj2/genres_recognition/my_dataset.json
